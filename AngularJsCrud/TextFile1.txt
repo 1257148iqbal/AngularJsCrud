@@ -1,0 +1,17 @@
+﻿Angular JS
+
+1. Create a Project => Web API => Individual User Accounts => OK
+2. Right Click Models => Class => Product 
+	 public int ProductID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Quantity { get; set; }
+3. Take a Controllers => Web Api 2 Controller with action, using Entity Framework => OK
+4. Tools => NuGet Package Manager => Install-Package angularjs => Enter 
+5. Right Click Scripts=> Add Folder Named Custom => Add Script File Named Main.Js
+6. Right Click Project => Add Folder Named Pages => Add HTML Page Named Product.html => 
+7. Views => Shared => _Layout.cshtml  And Views => Home => Index.cshtml  [Copy All _Layout.cshtml and Past Index.cshtml]
+8. Edit Index.cshtml => Flow the code
+9. Go to Main.js File and Reference These file  and Edit 
+	/// <reference path="../angular.min.js" />
+	/// <reference path="../angular-route.min.js" />

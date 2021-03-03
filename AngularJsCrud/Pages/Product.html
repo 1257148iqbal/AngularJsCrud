@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Product</title>
+</head>
+<body>
+    <br /><br />
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" ng-model="objProduct.ProductID" hidden />
+                    <input type="text" ng-model="objProduct.Name" class="form-control" placeholder="Product Name" />
+                </td>
+
+                <td>
+                    <input type="text" ng-model="objProduct.Price" class="form-control" placeholder="Product Price" />
+                </td>
+
+                <td>
+                    <input type="text" ng-model="objProduct.Quantity" class="form-control" placeholder="Product Quantity" />
+                </td>
+                <td>
+                    <button ng-click="SaveProduct()">Save</button>
+                    <button ng-click="UpdateProduct()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table class="table">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+
+            <tr ng-repeat="p in ProductList">
+                <td>{{p.ProductID}}</td>
+                <td>{{p.Name}}</td>
+                <td>{{p.Price}}</td>
+                <td>{{p.Quantity}}</td>
+                <td>
+                    <button ng-click="EditProduct(p)">Edit</button>
+                    <button ng-click="DeleteProduct(p.ProductID)">Delete</button>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
